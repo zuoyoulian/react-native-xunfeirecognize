@@ -162,8 +162,8 @@ public class MscSpeechModule extends ReactContextBaseJavaModule {
         msg = "你好像没有说话哦";
         Log.i(TAG, "你好像没有说话哦");
       } else if (error.getErrorCode() == 20001) {
-        msg = "没有网络";
-        Log.i(TAG, "没有网络");
+        msg = "网络不给力，请检查网络连接";
+        Log.i(TAG, "网络不给力，请检查网络连接");
       } else {
         msg = error.getPlainDescription(true);
         Log.i(TAG, error.getPlainDescription(true));
