@@ -1,4 +1,4 @@
-1、yarn add react-native-xunfeirecognize --save
+1、yarn add git+ssh://git@git.jingzhengu.com:zuojj/react-native-xunfeirecognize.git
 2、react-native link react-native-xunfeirecognize
 
 3、link之后Android的可以直接使用，iOS功能需要添加iflyMSC.framework到主工程，并设置主工程的
