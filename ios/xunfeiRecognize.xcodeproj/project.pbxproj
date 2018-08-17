@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00818AD71F8F3DBC006D9AEE /* IFlyRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00818AD31F8F3DBC006D9AEE /* IFlyRecognizer.m */; };
+		00818AD81F8F3DBC006D9AEE /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 00818AD41F8F3DBC006D9AEE /* IATConfig.m */; };
+		19E5346A21267088004E990C /* JZGSpeechRecognitionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346021267087004E990C /* JZGSpeechRecognitionHelper.m */; };
+		19E5346B21267088004E990C /* NSInvocation+JZGAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346421267087004E990C /* NSInvocation+JZGAdd.m */; };
+		19E5346C21267088004E990C /* JZGASRModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346521267087004E990C /* JZGASRModule.m */; };
+		19E5346D21267088004E990C /* JZGSystemResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346621267088004E990C /* JZGSystemResource.m */; };
+		19E5346E21267088004E990C /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346721267088004E990C /* ISRDataHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00818AC51F8F3D61006D9AEE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00818AC71F8F3D61006D9AEE /* libxunfeiRecognize.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libxunfeiRecognize.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		00818AD31F8F3DBC006D9AEE /* IFlyRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFlyRecognizer.m; sourceTree = "<group>"; };
+		00818AD41F8F3DBC006D9AEE /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IATConfig.m; sourceTree = "<group>"; };
+		00818AD51F8F3DBC006D9AEE /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IATConfig.h; sourceTree = "<group>"; };
+		00818AD61F8F3DBC006D9AEE /* IFlyRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyRecognizer.h; sourceTree = "<group>"; };
+		19E5346021267087004E990C /* JZGSpeechRecognitionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZGSpeechRecognitionHelper.m; sourceTree = "<group>"; };
+		19E5346121267087004E990C /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
+		19E5346221267087004E990C /* JZGSystemResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZGSystemResource.h; sourceTree = "<group>"; };
+		19E5346321267087004E990C /* NSInvocation+JZGAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+JZGAdd.h"; sourceTree = "<group>"; };
+		19E5346421267087004E990C /* NSInvocation+JZGAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+JZGAdd.m"; sourceTree = "<group>"; };
+		19E5346521267087004E990C /* JZGASRModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZGASRModule.m; sourceTree = "<group>"; };
+		19E5346621267088004E990C /* JZGSystemResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZGSystemResource.m; sourceTree = "<group>"; };
+		19E5346721267088004E990C /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
+		19E5346821267088004E990C /* JZGSpeechRecognitionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZGSpeechRecognitionHelper.h; sourceTree = "<group>"; };
+		19E5346921267088004E990C /* JZGASRModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZGASRModule.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00818AC41F8F3D61006D9AEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00818ABE1F8F3D61006D9AEE = {
+			isa = PBXGroup;
+			children = (
+				00818AC91F8F3D61006D9AEE /* xunfeiRecognize */,
+				00818AC81F8F3D61006D9AEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00818AC81F8F3D61006D9AEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00818AC71F8F3D61006D9AEE /* libxunfeiRecognize.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00818AC91F8F3D61006D9AEE /* xunfeiRecognize */ = {
+			isa = PBXGroup;
+			children = (
+				19E5346121267087004E990C /* ISRDataHelper.h */,
+				19E5346721267088004E990C /* ISRDataHelper.m */,
+				19E5346921267088004E990C /* JZGASRModule.h */,
+				19E5346521267087004E990C /* JZGASRModule.m */,
+				19E5346821267088004E990C /* JZGSpeechRecognitionHelper.h */,
+				19E5346021267087004E990C /* JZGSpeechRecognitionHelper.m */,
+				19E5346221267087004E990C /* JZGSystemResource.h */,
+				19E5346621267088004E990C /* JZGSystemResource.m */,
+				19E5346321267087004E990C /* NSInvocation+JZGAdd.h */,
+				19E5346421267087004E990C /* NSInvocation+JZGAdd.m */,
+				00818AD51F8F3DBC006D9AEE /* IATConfig.h */,
+				00818AD41F8F3DBC006D9AEE /* IATConfig.m */,
+				00818AD61F8F3DBC006D9AEE /* IFlyRecognizer.h */,
+				00818AD31F8F3DBC006D9AEE /* IFlyRecognizer.m */,
+			);
+			path = xunfeiRecognize;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00818AC61F8F3D61006D9AEE /* xunfeiRecognize */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00818AD01F8F3D61006D9AEE /* Build configuration list for PBXNativeTarget "xunfeiRecognize" */;
+			buildPhases = (
+				00818AC31F8F3D61006D9AEE /* Sources */,
+				00818AC41F8F3D61006D9AEE /* Frameworks */,
+				00818AC51F8F3D61006D9AEE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xunfeiRecognize;
+			productName = xunfeiRecognize;
+			productReference = 00818AC71F8F3D61006D9AEE /* libxunfeiRecognize.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00818ABF1F8F3D61006D9AEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Robin;
+				TargetAttributes = {
+					00818AC61F8F3D61006D9AEE = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 00818AC21F8F3D61006D9AEE /* Build configuration list for PBXProject "xunfeiRecognize" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 00818ABE1F8F3D61006D9AEE;
+			productRefGroup = 00818AC81F8F3D61006D9AEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00818AC61F8F3D61006D9AEE /* xunfeiRecognize */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00818AC31F8F3D61006D9AEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19E5346E21267088004E990C /* ISRDataHelper.m in Sources */,
+				19E5346C21267088004E990C /* JZGASRModule.m in Sources */,
+				00818AD81F8F3DBC006D9AEE /* IATConfig.m in Sources */,
+				19E5346D21267088004E990C /* JZGSystemResource.m in Sources */,
+				00818AD71F8F3DBC006D9AEE /* IFlyRecognizer.m in Sources */,
+				19E5346B21267088004E990C /* NSInvocation+JZGAdd.m in Sources */,
+				19E5346A21267088004E990C /* JZGSpeechRecognitionHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		00818ACE1F8F3D61006D9AEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		00818ACF1F8F3D61006D9AEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00818AD11F8F3D61006D9AEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z9Z47M4CUE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xunfeiRecognize",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Libraries/**",
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00818AD21F8F3D61006D9AEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z9Z47M4CUE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xunfeiRecognize",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Libraries/**",
+					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00818AC21F8F3D61006D9AEE /* Build configuration list for PBXProject "xunfeiRecognize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00818ACE1F8F3D61006D9AEE /* Debug */,
+				00818ACF1F8F3D61006D9AEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00818AD01F8F3D61006D9AEE /* Build configuration list for PBXNativeTarget "xunfeiRecognize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00818AD11F8F3D61006D9AEE /* Debug */,
+				00818AD21F8F3D61006D9AEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00818ABF1F8F3D61006D9AEE /* Project object */;
+}
