@@ -29,7 +29,7 @@ import org.json.JSONObject;
 
 public class MscSpeechModule extends ReactContextBaseJavaModule {
 
-  private static final String TAG = "MscSpeechModule";
+  private static final String TAG = "IFlyRecognizer";
   private Callback callback;
   private SpeechRecognizer recognizer;
   // 引擎类型
