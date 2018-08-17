@@ -11,7 +11,6 @@
 		00818AD81F8F3DBC006D9AEE /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 00818AD41F8F3DBC006D9AEE /* IATConfig.m */; };
 		19E5346A21267088004E990C /* JZGSpeechRecognitionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346021267087004E990C /* JZGSpeechRecognitionHelper.m */; };
 		19E5346B21267088004E990C /* NSInvocation+JZGAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346421267087004E990C /* NSInvocation+JZGAdd.m */; };
-		19E5346C21267088004E990C /* JZGASRModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346521267087004E990C /* JZGASRModule.m */; };
 		19E5346D21267088004E990C /* JZGSystemResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346621267088004E990C /* JZGSystemResource.m */; };
 		19E5346E21267088004E990C /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E5346721267088004E990C /* ISRDataHelper.m */; };
 /* End PBXBuildFile section */
@@ -39,11 +38,9 @@
 		19E5346221267087004E990C /* JZGSystemResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZGSystemResource.h; sourceTree = "<group>"; };
 		19E5346321267087004E990C /* NSInvocation+JZGAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+JZGAdd.h"; sourceTree = "<group>"; };
 		19E5346421267087004E990C /* NSInvocation+JZGAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+JZGAdd.m"; sourceTree = "<group>"; };
-		19E5346521267087004E990C /* JZGASRModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZGASRModule.m; sourceTree = "<group>"; };
 		19E5346621267088004E990C /* JZGSystemResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZGSystemResource.m; sourceTree = "<group>"; };
 		19E5346721267088004E990C /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
 		19E5346821267088004E990C /* JZGSpeechRecognitionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZGSpeechRecognitionHelper.h; sourceTree = "<group>"; };
-		19E5346921267088004E990C /* JZGASRModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZGASRModule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +75,6 @@
 			children = (
 				19E5346121267087004E990C /* ISRDataHelper.h */,
 				19E5346721267088004E990C /* ISRDataHelper.m */,
-				19E5346921267088004E990C /* JZGASRModule.h */,
-				19E5346521267087004E990C /* JZGASRModule.m */,
 				19E5346821267088004E990C /* JZGSpeechRecognitionHelper.h */,
 				19E5346021267087004E990C /* JZGSpeechRecognitionHelper.m */,
 				19E5346221267087004E990C /* JZGSystemResource.h */,
@@ -152,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E5346E21267088004E990C /* ISRDataHelper.m in Sources */,
-				19E5346C21267088004E990C /* JZGASRModule.m in Sources */,
 				00818AD81F8F3DBC006D9AEE /* IATConfig.m in Sources */,
 				19E5346D21267088004E990C /* JZGSystemResource.m in Sources */,
 				00818AD71F8F3DBC006D9AEE /* IFlyRecognizer.m in Sources */,
