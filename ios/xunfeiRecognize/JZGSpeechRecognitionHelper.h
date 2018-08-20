@@ -24,10 +24,6 @@ typedef void(^JZGASRFinishBlock)(NSString *strResult,IFlySpeechError *error);
 typedef void(^JZGASRVolumeChangedBlock)(int volume);
 
 
-/**
- *  讯飞语音appkey
- */
-#define kXunFeiASRAppKey           @"5b63b74f"
 //语音识别单例
 #define JZGSpeechRecognitionHelperSington  [JZGSpeechRecognitionHelper sharedInstance]
 #define kAppKeyWindow               ([UIApplication sharedApplication].keyWindow)
@@ -46,11 +42,6 @@ typedef void(^JZGASRVolumeChangedBlock)(int volume);
  @return 唯一的示例对象
  */
 +(JZGSpeechRecognitionHelper *) sharedInstance;
-
-/**
- 注册语音识别
- */
-- (void) registerASR;
 
 /**
  配置语音识别相关参数

@@ -35,41 +35,42 @@
 
 #pragma mark - delegate
 #pragma mark - IFlySpeechRecognizerDelegate
-//识别会话结束返回代理
-- (void)onCompleted: (IFlySpeechError *) error{
-    NSLog(@"onCompleted识别结果字符串：%@",self.textTemp);
-    
-    if (IATConfigSington.haveView) {
-        [self showTips:NSLocalizedString(@"识别完成", nil)];
-        NSLog(@"errorCode:%d",[error errorCode]);
-    }else {
-        NSString *text ;
-        if (self.isCanceled) {
-            text = NSLocalizedString(@"识别取消", nil);
-        } else if (error.errorCode == 0 ) {
-            if (_result.length == 0) {
-                text = NSLocalizedString(@"识别无结果", nil);
-            }else {
-                text = NSLocalizedString(@"识别成功", nil);
-                //empty results
-                _result = nil;
-            }
-        }else {
-            text = [NSString stringWithFormat:@"错误：%d %@", error.errorCode,error.errorDesc];
-            
-            if (self.finishASRBlock) {
-                self.finishASRBlock(self.textTemp,error);
-            }
-            return;
-        }
-        NSLog(@"识别结束: %@",text);
-//        [self showTips:text];
-    }
-
-    if (self.finishASRBlock) {
-        self.finishASRBlock(self.textTemp,nil);
-    }
-}
+//2018年08月17日 by 胡仕君：rn旧的语音识别框架没有此方法，故注释掉
+////识别会话结束返回代理
+//- (void)onCompleted: (IFlySpeechError *) error{
+//    NSLog(@"onCompleted识别结果字符串：%@",self.textTemp);
+//
+//    if (IATConfigSington.haveView) {
+//        [self showTips:NSLocalizedString(@"识别完成", nil)];
+//        NSLog(@"errorCode:%d",[error errorCode]);
+//    }else {
+//        NSString *text ;
+//        if (self.isCanceled) {
+//            text = NSLocalizedString(@"识别取消", nil);
+//        } else if (error.errorCode == 0 ) {
+//            if (_result.length == 0) {
+//                text = NSLocalizedString(@"识别无结果", nil);
+//            }else {
+//                text = NSLocalizedString(@"识别成功", nil);
+//                //empty results
+//                _result = nil;
+//            }
+//        }else {
+//            text = [NSString stringWithFormat:@"错误：%d %@", error.errorCode,error.errorDesc];
+//
+//            if (self.finishASRBlock) {
+//                self.finishASRBlock(self.textTemp,error);
+//            }
+//            return;
+//        }
+//        NSLog(@"识别结束: %@",text);
+////        [self showTips:text];
+//    }
+//
+//    if (self.finishASRBlock) {
+//        self.finishASRBlock(self.textTemp,nil);
+//    }
+//}
 
 //停止录音回调
 - (void) onEndOfSpeech{
@@ -103,6 +104,18 @@
 //会话取消回调
 - (void) onCancel{
     NSLog(@"识别取消...");
+}
+
+/*!
+ *  识别结束回调
+ *
+ *  @param errorCode 识别结束错误码
+ */
+
+- (void) onError:(IFlySpeechError *) errorCode{
+    if (self.finishASRBlock && errorCode.errorCode != 0) {
+        self.finishASRBlock(self.textTemp,errorCode);
+    }
 }
 
 //识别结果返回代理
@@ -139,6 +152,12 @@
     NSLog(@"_result=%@",_result);
     NSLog(@"识别结果字符串=%@",resultFromJson);
     NSLog(@"isLast=%d,文本框内容=%@",isLast,self.textTemp);
+    
+    if (isLast) {
+        if (self.finishASRBlock) {
+            self.finishASRBlock(self.textTemp,nil);
+        }
+    }
 }
 
 #pragma mark - IFlyRecognizerViewDelegate
@@ -162,6 +181,12 @@
     }
     
     self.textTemp = [NSString stringWithFormat:@"%@%@", self.textTemp,resultFromJson];
+    
+    if (isLast) {
+        if (self.finishASRBlock) {
+            self.finishASRBlock(self.textTemp,nil);
+        }
+    }
 }
 
 #pragma mark - IFlyPcmRecorderDelegate
@@ -293,14 +318,6 @@
     iatConfig.vadEos =   @"1800";
     //网络超时时间
     iatConfig.netTimeout = @"20000";
-}
-
-#pragma mark 注册语音识别
-- (void) registerASR
-{
-     //注册讯飞语音服务
-     NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",kXunFeiASRAppKey];
-     [IFlySpeechUtility createUtility:initString];
 }
 
 #pragma mark - Private

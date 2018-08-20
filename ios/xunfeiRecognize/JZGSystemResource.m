@@ -21,8 +21,6 @@
 #define iOS10                   ((kSystemVersion >= 10.0) ? YES : NO)
 #define iOS10_3                 ((kSystemVersion >= 10.3) ? YES : NO)
 
-#define kAppName                ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"])
-
 @implementation JZGSystemResource
 
 + (instancetype)share{
@@ -198,18 +196,18 @@
                                                    message:msg
                                                   delegate:self
                                          cancelButtonTitle:@"取消"
-                                         otherButtonTitles:@"去设置"];
+                                         otherButtonTitles:@"去设置",nil];
   [alert show];
 }
                          
-//#pragma mark - <UIAlertViewDelegate>
-//                         - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-//                           if (buttonIndex == 1) {
-//                             NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-//                             if ([[UIApplication sharedApplication] canOpenURL:url]) {
-//                               [[UIApplication sharedApplication] openURL:url];
-//                             }
-//                           }
-//                         }
+#pragma mark - <UIAlertViewDelegate>
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url];
+        }
+    }
+}
 
 @end

@@ -11,8 +11,9 @@
 #import "JZGSpeechRecognitionHelper.h"
 
 @interface IFlyRecognizer(){
-
 }
+
+@property(nonatomic, copy)RCTResponseSenderBlock getLocal;
 
 @end
 
@@ -40,7 +41,8 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_METHOD(startSpeech:(RCTResponseSenderBlock)callback)
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self startASRSpeech:callback];
+        self.getLocal = callback;
+        [self openAccessMicrophone];
     });
 }
 
@@ -51,26 +53,59 @@ RCT_EXPORT_METHOD(stopSpeech)
     });
 }
 
-- (void)startASRSpeech:(RCTResponseSenderBlock)getLocal{
+- (void)openAccessMicrophone{
+    [[JZGSystemResource share] handleAccessMicrophoneWithTarget:self selecter:@selector(startASRSpeech)];
+    if (![JZGSystemResource isAllowAccessMicrophone]) {
+        NSDictionary *result = @{
+                                 @"status": @"30002",
+                                 @"msg": [NSString stringWithFormat:@"此功能需要开启【麦克风】授权，请在【设置-隐私-麦克风】中开启【%@】的权限",kAppName],
+                                 };
+        self.getLocal(@[result]);
+    }
+}
+
+- (void)startASRSpeech{
     [JZGSpeechRecognitionHelperSington configASRParams];
     [JZGSpeechRecognitionHelperSington beginASR];
     //初始化错误
     JZGSpeechRecognitionHelperSington.errorInitASRBlock = ^{
+        //科大讯飞初始化遇到问题
+        NSDictionary *result = @{
+                                 @"status":@"30003",
+                                 @"msg": @"",
+                                 };
+        self.getLocal(@[result]);
     };
     //识别结果
     JZGSpeechRecognitionHelperSington.finishASRBlock = ^(NSString *strResult,IFlySpeechError *error) {
         if (error) {
+            if (error.errorCode == 20001) {
+                NSDictionary *result = @{
+                                         @"status":@(error.errorCode),
+                                         @"msg": @"网络不给力，请检查网络连接",
+                                         };
+                self.getLocal(@[result]);
+                return;
+            }
             NSDictionary *result = @{
                                      @"status":@(error.errorCode),
                                      @"msg": error.errorDesc,
                                      };
-            getLocal(@[result]);
+            self.getLocal(@[result]);
         } else {
+            if (strResult && strResult.length) {
+                NSDictionary *result = @{
+                                         @"status": @"200",
+                                         @"msg": strResult,
+                                         };
+                self.getLocal(@[result]);
+                return;
+            }
             NSDictionary *result = @{
-                                     @"status": @"200",
-                                     @"msg": strResult,
+                                     @"status": @"30001",
+                                     @"msg": @"您好像没有说话额",
                                      };
-            getLocal(@[result]);
+            self.getLocal(@[result]);
         }
     };
 }

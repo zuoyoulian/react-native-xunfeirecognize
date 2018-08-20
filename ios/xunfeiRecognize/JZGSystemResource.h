@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define kAppName                ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"])
+
 @interface JZGSystemResource : NSObject
 
 /**
