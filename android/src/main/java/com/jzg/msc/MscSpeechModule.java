@@ -2,6 +2,7 @@ package com.jzg.msc;
 
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.TextUtils;
 import android.util.Log;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
@@ -69,7 +70,7 @@ public class MscSpeechModule extends ReactContextBaseJavaModule {
 //      map.putInt("status", errorCode);
 //      map.putString("msg", "听写失败");
 //      callback.invoke(map);
-      stopSpeech(errorCode,"听写失败");
+      stopSpeech(errorCode, "听写失败");
     }
 
   }
@@ -83,16 +84,20 @@ public class MscSpeechModule extends ReactContextBaseJavaModule {
     }
   }
 
-  private void stopSpeech(int errorCode,String msg){
+  private void stopSpeech(int errorCode, String msg) {
     if (recognizer != null && recognizer.isListening()) {
       recognizer.stopListening();
     }
     WritableMap map = Arguments.createMap();
-    map.putInt("status", errorCode);
-    map.putString("msg", msg);
+    if(TextUtils.isEmpty((msg))){
+      map.putInt("status", 30001);
+      map.putString("msg", "您好像没有说话额");
+    }else {
+      map.putInt("status", errorCode);
+      map.putString("msg", msg);
+    }
     callback.invoke(map);
   }
-
 
 
   private void setParam() {
@@ -164,6 +169,9 @@ public class MscSpeechModule extends ReactContextBaseJavaModule {
       } else if (error.getErrorCode() == 20001) {
         msg = "网络不给力，请检查网络连接";
         Log.i(TAG, "网络不给力，请检查网络连接");
+      } else if (error.getErrorCode() == 20006) {
+        msg = "此功能需要开启【麦克风】授权，请在【设置】中开启【麦克风】的权限";
+        errorCode = 30002;
       } else {
         msg = error.getPlainDescription(true);
         Log.i(TAG, error.getPlainDescription(true));
@@ -174,7 +182,7 @@ public class MscSpeechModule extends ReactContextBaseJavaModule {
 //      map.putString("msg", msg);
 
 //      callback.invoke(map);
-      stopSpeech(errorCode,msg);
+      stopSpeech(errorCode, msg);
     }
 
     @Override
@@ -192,7 +200,7 @@ public class MscSpeechModule extends ReactContextBaseJavaModule {
 //        map.putString("msg", speechConent);
 //        callback.invoke(map);
         Log.i(TAG, "结束了");
-        stopSpeech(200,speechConent);
+        stopSpeech(200, speechConent);
       }
     }
 
