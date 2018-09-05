@@ -104,7 +104,7 @@ RCT_EXPORT_METHOD(stopSpeech)
             }
             NSDictionary *result = @{
                                      @"status": @"30001",
-                                     @"msg": @"您好像没有说话额",
+                                     @"msg": @"您好像没有说话哦",
                                      };
             self.getLocal(@[result]);
         }
