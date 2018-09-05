@@ -91,7 +91,7 @@ public class MscSpeechModule extends ReactContextBaseJavaModule {
     WritableMap map = Arguments.createMap();
     if(TextUtils.isEmpty((msg))){
       map.putInt("status", 30001);
-      map.putString("msg", "您好像没有说话额");
+      map.putString("msg", "您好像没有说话哦");
     }else {
       map.putInt("status", errorCode);
       map.putString("msg", msg);
