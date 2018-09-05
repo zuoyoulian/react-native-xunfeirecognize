@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
 #import <iflyMSC/IFlyMSC.h>
+
 @interface IFlyRecognizer : NSObject<RCTBridgeModule>
+
 @end

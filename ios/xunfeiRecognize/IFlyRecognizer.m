@@ -22,9 +22,10 @@ RCT_EXPORT_MODULE()
 
 -(instancetype)init{
     if (self = [super init]) {
-      //Appid是应用的身份信息，具有唯一性，初始化时必须要传入Appid。
-      NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@", @"59db28be"];
-      [IFlySpeechUtility createUtility:initString];
+        [JZGSystemResource isAllowAccessMicrophone];
+        //Appid是应用的身份信息，具有唯一性，初始化时必须要传入Appid。
+        NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@", @"59db28be"];
+        [IFlySpeechUtility createUtility:initString];
     }
     return self;
 }
